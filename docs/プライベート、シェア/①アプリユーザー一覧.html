@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>①アプリユーザー一覧 - 平和台ホテル アプリ管理画面マニュアル</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navigation {
+            margin-bottom: 30px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eaecef;
+        }
+        .navigation a {
+            margin-right: 20px;
+            font-weight: 500;
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5em;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin-bottom: 1em;
+            color: #24292e;
+        }
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            color: #24292e;
+        }
+        h3 {
+            font-size: 1.3em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            color: #24292e;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 1em 0;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+        li {
+            margin: 0.5em 0;
+            line-height: 1.6;
+        }
+        strong {
+            font-weight: 600;
+            color: #d73a49;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eaecef;
+            text-align: center;
+            color: #6a737d;
+            font-size: 0.9em;
+        }
+        /* 特殊文字のスタイリング */
+        .warning {
+            background-color: #fff5f5;
+            border-left: 4px solid #d73a49;
+            padding: 10px 15px;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="../index.html">ホーム</a>
+            <a href="%E3%82%A2%E3%83%97%E3%83%AA%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2%20%E6%93%8D%E4%BD%9C%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.html">管理画面マニュアル</a>
+            <a href="%E2%91%A0%E3%82%A2%E3%83%97%E3%83%AA%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%80%E8%A6%A7.html">ユーザー一覧</a>
+            <a href="%E2%91%A1%E3%83%A1%E3%83%AB%E3%83%9E%E3%82%AC%E9%85%8D%E4%BF%A1.html">メルマガ配信</a>
+            <a href="%E2%91%A2%E3%82%A2%E3%83%97%E3%83%AA%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E6%99%82%E9%80%9A%E7%9F%A5.html">ログイン時通知</a>
+        </nav>
+        
+        <main>
+            <h1>①アプリユーザー一覧</h1>
+
+<p>アプリに登録されているお客様の一覧です。</p>
+<p>登録情報の確認／編集、履歴（ログイン、チェックイン、クーポン、メルマガ受信）の閲覧が</p>
+<p>できます。</p>
+<p>新規ユーザー登録を管理画面から行うことはできません。</p>
+<p>検索を実行前はアプリユーザーが一覧表示されます。（更新が古い順）</p>
+
+<p>!<a href="app-user-list/ユーザー一覧.png">ユーザー一覧①.png</a></p>
+
+<h3>ユーザー名／ふりがな：アプリに登録のお客様の姓名</h3>
+<p>ユーザー名／ふりがないずれかをクリックすると</p>
+<p>ユーザー情報の詳細を確認／編集できます。</p>
+
+<h3>都　道　府　県　：居住都道府県</h3>
+
+<h3>最終チェックイン：店舗に設置のQRコードでアプリでチェックインされた</h3>
+<p>最終の履歴</p>
+
+<h3>ユ ー ザ ー  ロ グ  ：「履歴」ボタンをクリックし、下記を確認できます。</h3>
+
+<p>・**ログイン履歴</p>
+<p>・チェックイン履歴（店舗・時間）</p>
+<p>・クーポン履歴（クーポン名・発行日時・有効期限・使用日時）</p>
+<p>・メルマガ受信履歴**</p>
+
+<p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
+
+<h2>＜検索方法＞</h2>
+
+<p>姓（漢字／かな）、名（漢字／かな）、居住都道府県から検索できます。</p>
+<p>1つの要素で検索することも（例：姓「田中」で検索）、</p>
+<p>複数の要素で検索することも（例：姓「田中」、都道府県「福岡県」で検索）可能です。</p>
+
+<p class="warning">※都道府県を一度選択して、その選択を解除する場合には「クリア」をクリックし、最初から</p>
+<p>検索し直してください。</p>
+
+<p>!<a href="app-user-list/ユーザー一覧%201.png">ユーザー一覧②.png</a></p>
+
+<p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
+
+<h2>＜登録内容の変更方法＞</h2>
+
+<p>該当のユーザーのユーザー名／ふりがな のいずれかをクリックし編集画面を開きます。</p>
+<p>登録内容を変更後、画面下方の「変更」ボタンをクリックします。</p>
+
+<p class="warning">※アプリ使用禁止の設定（ログインできなくなります）、ユーザー削除もここからできます。</p>
+
+<strong>※メールアドレスの登録は管理画面からは変更できません。</strong>
+
+<p>!<a href="./app-user-list/ユーザー一覧%202.png">ユーザー一覧③.png</a></p>
+
+<p>!<a href="app-user-list/ユーザー一覧%203.png">ユーザー一覧④.png</a></p>
+
+<p>「変更」をクリックすると確認のウィンドウが出るので「ＯＫ」をクリックします。</p>
+
+<p>!<a href="app-user-list/ユーザー一覧%204.png">ユーザー一覧⑤.png</a></p>
+
+<p>「一覧へ戻る」をクリックし、前の画面に戻るか、画面左側のメニューリストから他のメニューへ移動します。</p>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 平和台ホテル. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
