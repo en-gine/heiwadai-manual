@@ -33,7 +33,7 @@ defaults:
     values:
       layout: "default"
   - scope:
-      path: "プライベート、シェア"
+      path: "manual"
     values:
       layout: "default"
 

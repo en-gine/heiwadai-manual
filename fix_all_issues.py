@@ -65,11 +65,11 @@ def fix_index_html():
     
     # Update all the links to use the new English paths
     replacements = [
-        ('../プライベート、シェア/アプリ管理画面%20操作マニュアル.html', 'manual/admin-manual.html'),
-        ('../プライベート、シェア/①アプリユーザー一覧.html', 'manual/app-user-list.html'),
-        ('../プライベート、シェア/②メルマガ配信.html', 'manual/newsletter.html'),
-        ('../プライベート、シェア/③アプリログイン時通知.html', 'manual/login-notification.html'),
-        ('../プライベート、シェア/＜×＞管理画面ユーザー登録方法.html', 'manual/admin-user-registration.html')
+        ('../manual/アプリ管理画面%20操作マニュアル.html', 'manual/admin-manual.html'),
+        ('../manual/①アプリユーザー一覧.html', 'manual/app-user-list.html'),
+        ('../manual/②メルマガ配信.html', 'manual/newsletter.html'),
+        ('../manual/③アプリログイン時通知.html', 'manual/login-notification.html'),
+        ('../manual/＜×＞管理画面ユーザー登録方法.html', 'manual/admin-user-registration.html')
     ]
     
     for old, new in replacements:

@@ -63,7 +63,7 @@ bundle exec jekyll serve
 ├── _config.yml           # Jekyll設定ファイル
 ├── _layouts/            # レイアウトテンプレート
 ├── index.md             # トップページ
-├── プライベート、シェア/  # マニュアルドキュメント
+├── manual/  # マニュアルドキュメント
 │   ├── *.md            # 各種マニュアル
 │   ├── app-user-list/   # ユーザー一覧画像
 │   ├── newsletter/      # メルマガ配信画像
