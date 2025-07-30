@@ -1,0 +1,13 @@
+# Netlify設定ファイル（代替案）
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+
+# Basic認証の設定例
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Basic-Auth = "user:password"  # 実際の使用時は環境変数で設定
