@@ -30,6 +30,7 @@ jobs:
           host: ${{ secrets.XSERVER_HOST }}
           username: ${{ secrets.XSERVER_USERNAME }}
           key: ${{ secrets.XSERVER_SSH_KEY }}
+          passphrase: ${{ secrets.XSERVER_SSH_PASSPHRASE }}
           port: ${{ secrets.XSERVER_PORT }}
           script: |
             mkdir -p /home/engine0606/heiwadai-hotel.app/public_html/manual
@@ -41,6 +42,7 @@ jobs:
           host: ${{ secrets.XSERVER_HOST }}
           username: ${{ secrets.XSERVER_USERNAME }}
           key: ${{ secrets.XSERVER_SSH_KEY }}
+          passphrase: ${{ secrets.XSERVER_SSH_PASSPHRASE }}
           port: ${{ secrets.XSERVER_PORT }}
           source: "_site/*"
           target: "/home/engine0606/heiwadai-hotel.app/public_html/manual"
