@@ -1,0 +1,47 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Deploy to Xserver via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.XSERVER_HOST }}
+          username: ${{ secrets.XSERVER_USERNAME }}
+          key: ${{ secrets.XSERVER_SSH_KEY }}
+          port: ${{ secrets.XSERVER_PORT }}
+          script: |
+            mkdir -p /home/engine0606/heiwadai-hotel.app/public_html/manual
+            find /home/engine0606/heiwadai-hotel.app/public_html/manual -mindepth 1 -not -name '.htaccess' -not -name '.htpasswd' -delete
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.XSERVER_HOST }}
+          username: ${{ secrets.XSERVER_USERNAME }}
+          key: ${{ secrets.XSERVER_SSH_KEY }}
+          port: ${{ secrets.XSERVER_PORT }}
+          source: "_site/*"
+          target: "/home/engine0606/heiwadai-hotel.app/public_html/manual"
+          strip_components: 1
